@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="website that contain total it solution and services">
+    <meta name="author" content="dipak makvana">
+    <title>Portfolio| Epic-Technolab</title>
+    <link href="public/css/bootstrap.min.css" rel="stylesheet">
+    <link href="public/css/font-awesome.min.css" rel="stylesheet">
+    <link href="public/css/lightbox.css" rel="stylesheet">
+    <link href="public/css/animate.min.css" rel="stylesheet">
+    <link href="public/css/main.css" rel="stylesheet">
+    <link href="public/css/responsive.css" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <link rel="shortcut icon" href="images/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="public/images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="public/images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="public/images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="public/images/ico/apple-touch-icon-57-precomposed.png">
+</head><!--/head-->
+<style>
+
+
+        #temp{
+            height:522px;
+        }
+
+        #img3{
+        background-size:cover;
+            background-position: center;
+        border:5px solid darkcyan;
+        background-repeat: no-repeat;
+        border-radius:8px;
+        height: 100%;
+            }
+    #pdetails1{
+        font-weight: normal;
+        font-size: 15px;
+    }
+    #rightdiv{
+        float: right;
+        height: auto;
+    }
+    #header1{
+        color: darkcyan;
+
+    }
+    #ul1{
+        font-weight: 900;
+    }
+    #a1{
+        margin-right: 10px;
+        font-weight: 900;
+        margin-left: 10px;
+    }
+    #a2{
+        margin-right: 10px;
+        font-weight: bold;
+
+        margin-left: 10px;
+    }
+    #a3{
+        color: darkcyan;
+        font-weight: 900;
+        margin-left: 20px;
+        margin-right: 10px;
+          letter-spacing: 1px;
+        padding-left: 5px;
+
+    }
+    #preview1{
+        margin-right: 500px;
+      }
+    #a3:hover{
+        color: #00aeef;
+    }
+    #clientname:hover{
+        color: #00aee10;
+
+    }
+    #clientname{
+        color: darkcyan;
+        font-size: 13px;
+        margin-top: 20px;
+        font-weight: bolder;
+    }
+    #clnt{
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    #l33,#l34,#l35,#l36,#l37,#l38,#l39,#l310,#le11,#l312,#l313{
+        color: red;
+        font-weight: bolder;
+        font-size: 40px;
+
+    }
+</style>
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+        var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+        s1.async=true;
+        s1.src='https://embed.tawk.to/571f064da2ce853d5f089868/default';
+        s1.charset='UTF-8';
+        s1.setAttribute('crossorigin','*');
+        s0.parentNode.insertBefore(s1,s0);
+    })();
+</script>
+<!--End of Tawk.to Script-->
+<script type="text/javascript">
+    function loaddetails() {
+        var l=0;
+
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (xhttp.readyState == 4 && xhttp.status == 200) {
+                var data = JSON.parse(xhttp.responseText);
+              //  alert("yea");
+                var contain=document.createElement('div');
+                var Item_Type=data.Ptype;
+
+                contain.className="container";
+                var row=document.createElement('div');
+                row.className="row";
+
+                var tempclass=document.createElement('div');
+                tempclass.className="col-sm-6 col-xs-12";
+                tempclass.setAttribute("id","temp");
+                var Bimg=document.createElement('div');
+                var str = " ";
+                str += "data:image/;base64,";
+                str = str + data.Big_Image;
+                Bimg.src=str;
+                Bimg.className="img-responsive";
+                Bimg.setAttribute("id","img3");
+                Bimg.setAttribute("style","background-image: url("+str+");");
+                var secondside=document.createElement('div');
+                secondside.className="col-sm-6 col-xs-12";
+                secondside.setAttribute("id","rightdiv");
+                var portheader=document.createElement('H2');
+
+                portheader.className="project-name overflow";
+         //       secondside.appendChild(portheader);
+
+                var h1=document.createTextNode(data.PName);
+                h1.className="bold";
+                 //secondside.appendChild(h1);
+                portheader.setAttribute("id","header1");
+                    portheader.appendChild(h1);
+                tempclass.appendChild(Bimg);
+
+                secondside.appendChild(portheader);
+                var ul1=document.createElement('ul');
+                ul1.className="nav navbar-nav navbar-default";
+                var li1=document.createElement('li');
+                var li2=document.createElement('li');
+
+                var a1=document.createElement('a');
+                var a2=document.createElement('a');
+                a1.className="fa fa-clock-o";
+                a2.className="fa fa-tag";
+                var date=new Date(data.PDate);
+                a1.setAttribute("id","a1");
+                a2.setAttribute("id","a2");
+
+                var data1=document.createTextNode(date.toDateString());
+                var data2=document.createTextNode(data.Ptype);
+                a1.appendChild(data1);
+                a2.appendChild(data2);
+                li1.appendChild(a1);
+                li2.appendChild(a2);
+                ul1.appendChild(a1);
+                ul1.appendChild(a2);
+                ul1.setAttribute("id","ul1");
+                var pdetails=document.createElement('div');
+                pdetails.className="project-info overflow text-justify";
+                var pinfo=document.createElement("H3");
+                var h3=document.createTextNode("Project Info");
+                h3.className="bold";
+                pinfo.appendChild(h3);
+                var particle=document.createTextNode(data.Pinfo);
+                var pp=document.createElement('div');
+                pp.setAttribute("id","pdetails1");
+                pp.appendChild(particle);
+                pdetails.appendChild(pinfo);
+                pdetails.appendChild(pp);
+                var skill=document.createElement('div');
+                skill.className="skills overflow";
+                var skl=document.createElement("H3");
+                var h4=document.createTextNode("Skills:");
+                h4.className="bold";
+                skl.appendChild(h4);
+                skill.appendChild(skl);
+                pdetails.appendChild(skl);
+                var ul2=document.createElement('ul');
+                ul2.className="nav navbar-nav navbar-default";
+                if(data.php==1)
+                {
+                    var l3=document.createElement('li');
+                    var a3=document.createElement('a');
+                    a3.href="https://en.wikipedia.org/wiki/PHP";
+                    a3.setAttribute("id","a3");
+                    var data3=document.createTextNode("php");
+                    a3.className="fa fa-check-square";
+                    a3.setAttribute("target","_blank")
+                    a3.appendChild(data3);
+                    l3.setAttribute("id","l33");
+                    l3.appendChild(a3);
+                    ul2.appendChild(l3);
+                    pdetails.appendChild(ul2);
+                }
+                if(data.css==1)
+                {
+                    var l3=document.createElement('li');
+                    var a3=document.createElement('a');
+                    a3.href="https://en.wikipedia.org/wiki/Cascading_Style_Sheets";
+                    a3.setAttribute("id","a3");
+                    var data3=document.createTextNode("css");
+                    a3.className="fa fa-check-square";
+                    a3.setAttribute("target","_blank")
+                    a3.appendChild(data3);
+                    l3.setAttribute("id","l34");
+                    l3.appendChild(a3);
+                    ul2.appendChild(l3);
+                    pdetails.appendChild(ul2);
+                }
+
+                if(data.html5==1)
+                {
+                    var l3=document.createElement('li');
+                    var a3=document.createElement('a');
+                    a3.href="https://en.wikipedia.org/wiki/HTML5";
+                    a3.setAttribute("id","a3");
+                    var data3=document.createTextNode("html5");
+                    a3.className="fa fa-check-square";
+                    a3.setAttribute("target","_blank")
+                    a3.appendChild(data3);
+                    l3.setAttribute("id","l35");
+                    l3.appendChild(a3);
+                    ul2.appendChild(l3);
+                    pdetails.appendChild(ul2);
+                }
+                if(data.javascript==1)
+                {
+                    var l3=document.createElement('li');
+                    var a3=document.createElement('a');
+                    a3.href="https://en.wikipedia.org/wiki/JavaScript";
+                    a3.setAttribute("id","a3");
+                    var data3=document.createTextNode("JavaScript");
+                    a3.className="fa fa-check-square";
+                    a3.setAttribute("target","_blank")
+                    a3.appendChild(data3);
+                    l3.setAttribute("id","l36");
+                    l3.appendChild(a3);
+                    ul2.appendChild(l3);
+                    pdetails.appendChild(ul2);
+                }
+               // alert("Website_Audit");
+                if((data.Website_Audit)==1)
+                {
+                    var l3=document.createElement('li');
+                    var a3=document.createElement('a');
+                    a3.href="https://en.wikipedia.org/wiki/Content_audit";
+                    a3.setAttribute("id","a3");
+                    var data3=document.createTextNode("Website Audit");
+                    a3.className="fa fa-check-square";
+                    a3.setAttribute("target","_blank")
+                    a3.appendChild(data3);
+                    l3.setAttribute("id","l37");
+                    l3.appendChild(a3);
+                    ul2.appendChild(l3);
+                    pdetails.appendChild(ul2);
+                }
+                if((data.Keyword_research)==1){
+                    var l3=document.createElement('li');
+                    var a3=document.createElement('a');
+                    a3.href="https://en.wikipedia.org/wiki/Keyword_research";
+                    a3.setAttribute("id","a3");
+                    var data3=document.createTextNode("Keyword research");
+                    a3.className="fa fa-check-square";
+                    a3.setAttribute("target","_blank")
+                    a3.appendChild(data3);
+                    l3.setAttribute("id","l38");
+                    l3.appendChild(a3);
+                    ul2.appendChild(l3);
+                    pdetails.appendChild(ul2);
+                }
+                if((data.On_page_optimization)==1)
+                {
+                    var l3=document.createElement('li');
+                    var a3=document.createElement('a');
+                    a3.href="https://en.wikipedia.org/wiki/Search_engine_optimization";
+                    a3.setAttribute("id","a3");
+                    var data3=document.createTextNode("On Page Optimization");
+                    a3.className="fa fa-check-square";
+                    a3.setAttribute("target","_blank")
+                    a3.appendChild(data3);
+                    l3.setAttribute("id","l39");
+                    l3.appendChild(a3);
+                    ul2.appendChild(l3);
+                    pdetails.appendChild(ul2);
+                }
+                if((data.Content_optimization)==1)
+                {
+                    var l3=document.createElement('li');
+                    var a3=document.createElement('a');
+                    a3.href="https://en.wikipedia.org/wiki/Search_engine_optimization";
+                    a3.setAttribute("id","a3");
+                    var data3=document.createTextNode("Content Optimization");
+                    a3.className="fa fa-check-square";
+                    a3.setAttribute("target","_blank")
+                    a3.appendChild(data3);
+                    l3.setAttribute("id","l310");
+                    l3.appendChild(a3);
+                    ul2.appendChild(l3);
+                    pdetails.appendChild(ul2);
+                }
+                if((data.Off_page_optimization)==1)
+                {
+                    var l3=document.createElement('li');
+                    var a3=document.createElement('a');
+                    a3.href="https://en.wikipedia.org/wiki/Search_engine_optimization";
+                    a3.setAttribute("id","a3");
+                    var data3=document.createTextNode("Off Page Optimization");
+                    a3.className="fa fa-check-square";
+                    a3.setAttribute("target","_blank")
+                    a3.appendChild(data3);
+                    l3.setAttribute("id","l311");
+                    l3.appendChild(a3);
+                    ul2.appendChild(l3);
+                    pdetails.appendChild(ul2);
+                } if((data.Quality_link_building)==1)
+                {
+                    var l3=document.createElement('li');
+                    var a3=document.createElement('a');
+                    a3.href="https://en.wikipedia.org/wiki/Search_engine_optimization";
+                    a3.setAttribute("id","a3");
+                    var data3=document.createTextNode("Quality link building");
+                    a3.className="fa fa-check-square";
+                    a3.setAttribute("target","_blank")
+                    a3.appendChild(data3);
+                    l3.setAttribute("id","l312");
+                    l3.appendChild(a3);
+                    ul2.appendChild(l3);
+                    pdetails.appendChild(ul2);
+                } if((data.Google_analytics_and_Google_webmaster_tool_setup)==1)
+                {
+                    var l3=document.createElement('li');
+                    var a3=document.createElement('a');
+                    a3.href="https://en.wikipedia.org/wiki/Google_Search_Console";
+                    a3.setAttribute("id","a3");
+                    var data3=document.createTextNode("Google Analytics and Google Webmaster Tool Setup");
+                    a3.className="fa fa-check-square";
+                    a3.setAttribute("target","_blank")
+                    a3.appendChild(data3);
+                    l3.setAttribute("id","l313");
+                    l3.appendChild(a3);
+                    ul2.appendChild(l3);
+                    pdetails.appendChild(ul2);
+                }
+
+                var client23=document.createElement('div');
+                client23.className="client overflow";
+                var sk2=document.createElement('H3');
+
+                var h31=document.createTextNode("Client:");
+                h31.className="bold";
+                sk2.setAttribute("id","clnt");
+                sk2.appendChild(h31);
+                client23.appendChild(sk2);
+                var client22=document.createElement('ul');
+                client22.className="nav navbar-nav navbar-default";
+                var li22=document.createElement('li');
+                var a22=document.createElement('a');
+                a22.className="fa fa-bolt";
+                a22.setAttribute("id","clientname")
+                var data212=document.createTextNode(data.Client);
+                a22.appendChild(data212);
+                li22.appendChild(a22);
+                client22.appendChild(li22);
+                client23.appendChild(client22);
+                var preview=document.createElement('div');
+                preview.className="live-preview";
+                preview.setAttribute("id","preview1");
+                var btn=document.createElement('button');
+                //btn.setAttribute('href','data1.PUrl');
+                var a44=document.createElement('a');
+                var a44text=document.createTextNode("Live Preview");
+                a44.href=data.PUrl;
+                a44.setAttribute("target","blank");
+                a44.appendChild(a44text);
+                btn.type="Button";
+                btn.className="btn btn-common uppercase";
+                btn.appendChild(a44);
+                preview.appendChild(btn);
+                var test1=document.createElement('div');
+                client23.appendChild(preview);
+                document.getElementById("portfolio-information").appendChild(secondside).appendChild(ul1).appendChild(pdetails).appendChild(test1).appendChild(preview);
+                document.getElementById("portfolio-information").appendChild(contain).appendChild(row).appendChild(tempclass);
+                loadworks(Item_Type);
+
+            }
+        };
+
+        xhttp.open("GET",'/portfolioid', true);
+        xhttp.send();
+    }
+    function  loadworks(tt) {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function () {
+            if (xhttp.readyState == 4 && xhttp.status == 200) {
+                var data1 = JSON.parse(xhttp.responseText);
+                var l=0;
+                var leanth1=data1.length;
+
+                var row3 = document.createElement('div');
+                var container3 = document.createElement('div');
+                row3.className="row";
+                container3.className="container";
+
+                var header_related=document.createElement('h1');
+                var hh=document.createTextNode("Related Works");
+                header_related.className="title text-center";
+                header_related.appendChild(hh);
+
+               document.getElementById("asd").appendChild(container3).appendChild(row3).appendChild(header_related);
+                while(l<leanth1) {
+                    var div = document.createElement('div');
+                    div.className = "col-xs-12 col-sm-4 col-md-3 portfolio-item" + data1[l].PId;
+                    div.setAttribute("style", "margin-top:20px;margin-bottom:20px;background-repeat: no repeat");
+                    //    div.setAttribute("style","");
+                    var str = " ";
+                    str += "data:image/;base64,";
+                    str = str + data1[l].PImage;
+                    //   div.backgroundImage="url("+str+")";
+                    //   div.setAttribute("style","background-image: url("+str+");Height:500px;");
+                    var wrapper = document.createElement('div');
+                    wrapper.className = "portfolio-wrapper";
+                    var single = document.createElement('div');
+                    single.className = "portfolio-single";
+                    var thumb = document.createElement('div');
+                    thumb.className = "portfolio-thumb";
+                    //thumb.backgroundImage="url("+str+") no repeat";
+                    thumb.setAttribute("style", "background-image: url(" + str + "); height:254px; background-size:cover; background-repeat: no repeat;border :4px solid darkcyan");
+                    var viewclass = document.createElement('div');
+                    viewclass.className = "portfolio-view";
+                    //var str2="<ul class='nav nav-pills'>"
+                    // var ul=document.createElement('str');
+                    var ul = document.createElement('ul');
+                    ul.className = "nav nav-pills";
+
+                    ///var str1='<li><i class="fa fa-link"></i></li></div>';
+                    var li1 = document.createElement('li');
+                    var a1 = document.createElement('a');
+                    a1.setAttribute("href", "/portfoliodetails?id=" + data1[l].PId);
+                    var a2 = document.createElement('a');
+                    a1.className = "fa fa-link";
+                    a2.setAttribute("href", str);
+                    a2.className = "fa fa-eye";
+                 //   alert("yes1");
+                    var li2 = document.createElement('li');
+
+                    $(a2).attr(
+                            {
+                                "data-lightbox": "example-set"
+
+                            });
+                    li1.appendChild(a1);
+                    li2.appendChild(a2);
+                    ul.appendChild(li1);
+                    ul.appendChild(li2);
+
+                    document.getElementById("asd").appendChild(div).appendChild(wrapper).appendChild(single).appendChild(thumb).appendChild(viewclass).appendChild(ul);
+
+                    l++;
+                }
+            }
+        }
+        xhttp.open("GET", '/portfolioworks?Item_Type='+tt, true);
+        xhttp.send();
+    }
+</script>
+
+
+<body style="font-weight: normal"  onload="loaddetails();">
+<header id="header">
+    <div class="nav navbar navbar-inverse navbar-custome navbar-static-top " role="banner" id="afx-nav" data-spy="affix" data-offset-top="50" style="font-weight: bolder;" >
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="img-responsive col-ld-3" href="/index" style="margin-top: -10%;">
+                    <h1><img src="public/images/1.png" alt="logo"></h1>
+                </a>
+
+
+            </div>
+            <div class="collapse navbar-collapse" style="background-image: url(public/images/coming-soon-bg.png)" >
+                <ul class="nav navbar-nav navbar-right" >
+                    <li><a href="/index" style="font-weight: bolder">Home</a></li>
+
+                    <li class="dropdown"><a href="/services" style="font-weight: bolder">Service <i class="fa fa-angle-down"></i></a>
+                        <ul role="menu" class="sub-menu">
+                            <li><a href="/ecommerce-development">ECommerce Development</a></li>
+                            <li><a href="/web-development">WebSite Development</a></li>
+                            <li><a href="/web-graphics-design">Web And Graphics Design</a></li>
+                            <li><a href="/mobileapps">Mobile Application Development</a></li>
+                            <li><a href="/digital-marketing">Digital Marketing</a></li>
+                            <li><a href="/software-Development">Custom Software development</a></li>
+
+
+                        </ul>
+                    </li>
+
+
+
+
+
+
+                    <li class="active" ><a href="/portfolio "style="font-weight: bolder">Portfolio</a></li>
+
+                    <li><a href="/blog" style="font-weight: bolder">Blog</a></li>
+
+                    <li><a href="/aboutus2" style="font-weight: bolder">About Us</a></li>
+                    <li><a href="/contactus" style="font-weight: bolder">Contact Us</a></li>
+
+
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</header>
+<!--/#header-->
+
+
+<section id="page-breadcrumb">
+    <div class="vertical-center sun">
+        <div class="container">
+            <div class="row">
+                <div class="action">
+                    <div class="col-sm-12">
+                        <h1 class="title">Portfolio</h1>
+                        <p>Be Creative</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--/#action-->
+
+<div id="portfolio-information" class="padding-top">
+
+</div>
+<!--/#portfolio-information-->
+
+<div id="related-work" class="padding-top padding-bottom">
+    <div class="container">
+        <div class="row" id="asd">
+
+        </div>
+</div>
+    </div>
+
+        <!--/#related-work-->
+<footer id="footer" style="background-color:darkslategrey ; color: white; position: static;">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-sm-12 text-center bottom-separator">
+                <img src="public/images/home/under.png" class="img-responsive inline" alt="">
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="testimonial bottom">
+                    <h2  style="font-weight: bolder">Testimonial</h2>
+                    <div class="media">
+                        <div class="pull-left">
+                            <a href="https://plus.google.com/u/0/107470112524923306375/posts" target="blank"><img class="img-responsive img-circle" src="public/images/aboutus/d2.jpg" alt="Dipak Makvana" ></a>
+                        </div>
+
+                        <div class="media-body" >
+                            <blockquote style="
+ color:white;">
+                                It's not at all important to get it right the first time. It's vitally important to get it right the last time.</blockquote>
+                            <h3 ><a href="https://plus.google.com/u/0/107470112524923306375/posts" target="blank" style="color:darkcyan;">-Dipak Makvana</a></h3>
+                        </div>
+                    </div>
+                    <div class="media">
+                        <div class="pull-left">
+                            <a href="https://plus.google.com/u/0/116417603916827687011" target="blank"><img class="img-responsive img-circle" src="public/images/aboutus/hire3.jpg" alt="Hiren Gohel" ></a>
+                        </div>
+
+                        <div class="media-body">
+                            <blockquote>
+                                Walking on water and developing software from a specification are easy if both are frozen</blockquote>
+                            <h3><a href="https://plus.google.com/u/0/116417603916827687011" target="blank"   style="color:darkcyan;">-Hiren Gohel</a></h3>
+                        </div>
+                    </div>
+                </div>
+            </div>       <div class="col-md-3 col-sm-6">
+            <div class="contact-info bottom">
+                <h2  style="font-weight: bolder;">Contacts:</h2>
+                <address>
+                    E-mail: <a href="https://mail.google.com/mail/?view=cm&fs=1&to=info@epictechnolabs.com&su=SUBJECT&body=BODY" target="blank" ">info@epictechnolabs.com </a>  <br>
+                    Phone: (+91)  8460798419    <br>
+                </address>
+
+
+
+
+                <h2>Address:</h2>
+                <address>
+                    B/309,Ugam Apt. <br>
+                    Near Sarswati Vidhyalaya, <br>
+                    Gaushala,A.K. Road, <br>
+                    Surat-395008, <br>
+                </address>
+            </div>
+        </div>
+            <div class="col-md-4 col-sm-12">
+                <div class="contact-form bottom">
+                    <h2  style="font-weight: bolder">Send a message</h2>
+                    <form action="sendemail" method="get">
+                        <div class="form-group" style="background-color: white; position: relative;">
+                            <input type="text" name="name" class="form-control" required="required" placeholder="Name">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" class="form-control" required="required" placeholder="Email Id">
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" id="message" required="required" class="form-control" rows="8" placeholder="Your text here"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" name="submit" class="btn btn-submit" value="Submit" style="background-color: darkcyan;">
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="col-sm-12">
+                <div class="copyright-text text-center" style="margin-top: 10px;">
+                    <a href="https://www.facebook.com/epictechnolabs/" target="blank" class="social"><i class="fa fa-facebook" ></i></a>
+                    <a href="https://twitter.com/epictechnolab" target="blank"  class="social"><i class="fa fa-twitter" ></i></a>
+                    <a  href="https://plus.google.com/114683656326325242436/about" target="blank"  class="social"><i class="fa fa-google-plus"></i></a>
+                    <a href="https://www.linkedin.com/in/dipak-makvana-828a27124?trk=nav_responsive_tab_profile" target="blank"  class="social"><i class="fa fa-linkedin" ></i></a>
+
+
+                    <p  style="font-weight: bolder; margin-top:20px; " >&copy; Epic Technolabs 2016. All Rights Reserved.</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</footer>
+
+<!--/#footer-->
+
+<script type="text/javascript" src="public/js/jquery.js"></script>
+<script type="text/javascript" src="public/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="public/js/lightbox.min.js"></script>
+<script type="text/javascript" src="public/js/wow.min.js"></script>
+<script type="text/javascript" src="public/js/jquery.countTo.js"></script>
+<script type="text/javascript" src="public/js/jquery.isotope.min.js"></script>
+
+<script type="text/javascript" src="public/js/main.js"></script>
+</body>
+</html>
